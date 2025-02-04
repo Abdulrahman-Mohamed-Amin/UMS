@@ -1,7 +1,7 @@
 # User Management System 🚀
 
 This is a simple **User Management System** built with **Angular**. It uses **Dummy JSON** as a backend, implements **JWT authentication**, and displays notifications with **ngx-toastr**.
-(Project Demo)[https://abdulrahman-mohamed-amin.github.io/UMS/]
+[Project Demo](https://abdulrahman-mohamed-amin.github.io/UMS/)
 ## Features ✨
 
 - ✅ User authentication using **JWT tokens**  
