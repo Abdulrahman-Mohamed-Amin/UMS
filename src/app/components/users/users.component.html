@@ -1,0 +1,43 @@
+<div class="mt-3 container-md">
+    <div class="d-flex justify-content-between align-items-center px-3  add pb-2">
+       <h5 class="m-0 p-0">Users List</h5>
+       <button class="btn btn-warning px-3 py-1 text-uppercase" [routerLink]="['../add-user']">Add new user</button>
+    </div>
+
+    <div class="row mt-5 gy-5 align-items-stretch">
+        <div class="col-lg-6 col-12" *ngFor="let user of users | paginate:{itemsPerPage:9 , currentPage: p} index as i ;">
+            <div class="position-relative bg-white rounded-2 shadow-sm box">
+                <img src="{{user.image}}" alt="" class="" width="70" height="70">
+                <div class="icons position-absolute">
+                    <i class="far fa-pen-to-square edit" [routerLink]="['../update' , user.id]"></i>
+                    <i class="fas fa-trash-alt delete" (click)="delete(user.id)"></i>
+                </div>
+                <div class="info">
+                    <div>
+                        <strong>Name:</strong>
+                        <span>{{user.firstName}}</span>
+                    </div>
+                    <div>
+                        <strong>Email:</strong>
+                        <span>{{user.email}}</span>
+                    </div>
+                    <div>
+                        <strong>Phone:</strong>
+                        <span>{{user.phone}}</span>
+                    </div>
+                    <div>
+                        <strong>Enroll Number:</strong>
+                        <span>{{user.ssn}}</span>
+                    </div>
+                    <div>
+                        <strong>Date of Admission:</strong>
+                        <span>{{user.birthDate}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-4 text-center">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+    </div>
+</div>

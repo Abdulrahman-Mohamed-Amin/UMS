@@ -1,0 +1,28 @@
+<div class="position-relative pt-5">
+    <span class="head">UMS</span>
+
+    <div class="info text-center mt-4" *ngIf="currentUser">
+        <img src="{{currentUser.image}}" alt="" class="rounded-pill" width="100" height="100">
+        <h5 class="mt-1 mb-1">{{currentUser.firstName}} {{currentUser.lastName}}</h5>
+        <h6 class="text-warning">{{currentUser.role}}</h6>
+    </div>
+
+    <ul class="list-unstyled d-flex flex-column align-items-center mt-5 gap-3">
+        <li class="d-flex align-items-center rounded-1 w-75 py-1 px-2">
+            <i class="fas fa-house me-3"></i>
+            <span class="text-capitalize">home</span>
+        </li>
+        <li class="d-flex align-items-center rounded-1 w-75 py-1 px-2" [routerLink]="['./users']" routerLinkActive="bg-warning" >
+            <i class="far fa-bookmark me-3"></i>
+            <span class="text-capitalize">users</span>
+        </li>
+        <li class="d-flex align-items-center rounded-1 w-75 py-1 px-2" [routerLink]="['./add-user']" routerLinkActive="bg-warning" >
+            <i class="fas fa-plus-circle me-3"></i>
+            <span class="text-capitalize">add user</span>
+        </li>
+        <li class="d-flex align-items-center rounded-1 w-75 py-1 px-2" [routerLink]="['./profile']" routerLinkActive="bg-warning" >
+            <i class="far fa-user me-3"></i>
+            <span class="text-capitalize">profile</span>
+        </li>
+    </ul>
+</div>

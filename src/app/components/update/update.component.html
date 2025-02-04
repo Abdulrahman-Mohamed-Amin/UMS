@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <h5 class="add pb-2">Update User</h5>
+
+    <form class="all_form shadow-sm mt-5 position-relative" [formGroup]="updateForm" (ngSubmit)="update()">
+        <div class="row gy-4">
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control"  [value]="user?.firstName" formControlName="firstname">
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control"  [value]="user?.lastName" formControlName="lastname">
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control"  [value]="user?.email" formControlName="email">
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Age</label>
+                    <input type="text" class="form-control"  [value]="user?.age" formControlName="age">
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Phone Number</label>
+                    <input type="text" class="form-control"  [value]="user?.phone" formControlName="phone">
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Birth Date</label>
+                    <input type="text" class="form-control"  [value]="user?.birthDate" formControlName="birthdate">
+                  </div>
+            </div>
+        </div>
+        <button class="btn btn-warning w-25 mx-auto mt-2 d-block">Save</button>
+    </form>
+</div>

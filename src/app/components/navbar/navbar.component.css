@@ -1,0 +1,29 @@
+i{
+    color: #dedede;
+}
+.nav{
+    background: #fff;
+}
+.form{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+.form input{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 10px;
+}
+.form input::placeholder{
+    color: #ccc;
+    font-size: 14px;
+}
+.form i{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+}

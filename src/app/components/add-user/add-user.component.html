@@ -1,0 +1,46 @@
+<div class="container mt-4">
+    <h5 class="add pb-2">Add User</h5>
+
+    <form class="all_form shadow-sm mt-3" [formGroup]="addUser" (ngSubmit)="add()">
+        <div class="row gy-4">
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">First Name</label>
+                    <input type="email" class="form-control" placeholder="Enter Your First name" formControlName="firstName" [ngClass]="{'is-invalid': addUser.get('firstName')?.getError('required') && addUser.get('firstName')?.touched}">
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input type="email" class="form-control" placeholder="Enter Your Last name" formControlName="lastName" [ngClass]="{'is-invalid': addUser.get('lastName')?.getError('required') && addUser.get('lastName')?.touched}">
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter Your Email" formControlName="email" [ngClass]="{'is-invalid': (addUser.get('email')?.getError('required') ||  addUser.get('email')?.getError('email')) && addUser.get('email')?.touched}">
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Age</label>
+                    <input type="number" class="form-control" placeholder="Enter Your Age" formControlName="age" [ngClass]="{'is-invalid': addUser.get('age')?.getError('required') && addUser.get('age')?.touched}">
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Phone Number</label>
+                    <input type="number" class="form-control" placeholder="Enter Your Phone" formControlName="phone" [ngClass]="{'is-invalid': addUser.get('phone')?.getError('required') && addUser.get('phone')?.touched}">
+                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="mb-3">
+                    <label class="form-label">Birth Date</label>
+                    <input type="date" class="form-control" placeholder="Enter Your Birth" formControlName="birthDate" [ngClass]="{'is-invalid': addUser.get('birthDate')?.getError('required') && addUser.get('birthDate')?.touched}">
+                  </div>
+            </div>
+        </div>
+
+        <button class="btn btn-warning py-2 px-5 my-3 d-block mx-auto w-25" [disabled]="addUser.invalid">Save</button>
+    </form>
+</div>

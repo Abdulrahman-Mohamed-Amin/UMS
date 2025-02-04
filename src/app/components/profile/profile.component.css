@@ -1,0 +1,9 @@
+input{
+    color: #000;
+    font-weight: bold;
+}
+.profile_img{
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}

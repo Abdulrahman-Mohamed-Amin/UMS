@@ -1,0 +1,15 @@
+h5{
+    border-left: 3px solid var(--orange);
+    padding-left: 10px;
+    font-weight: bold;
+}
+p{
+    font-size: 12px;
+}
+.form-label{
+    font-size: 15px;
+}
+.form-control::placeholder{
+    font-size: 12px;
+    color: #ccc;
+}

@@ -1,0 +1,41 @@
+
+th{
+    color: #bababa;
+}
+tr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box{
+    padding: 40px 15px 15px;
+    height: 210px;
+}
+.box .info div{
+    margin-bottom: 5px;
+}
+
+.box img{
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+.box .icons{
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    color: rgba(255, 166, 0, 0.699);
+}
+.icons i{
+    transition: 0.3s;
+}
+.icons i:hover{
+    color:orange;
+}
+.delete{
+}
