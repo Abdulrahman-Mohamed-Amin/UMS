@@ -5,7 +5,7 @@
                 <form class="bg-white px-3 pt-3 pb-4 rounded-2 shadow-sm" [formGroup]="login" >
                     <h5>User Management System</h5>
                     <h6 class="mt-5 text-center text-uppercase fw-bold">Sign In</h6>
-                    <p class="text-secondary text-center">Enter your credentials to access your account</p>
+                    <p class="text-secondary text-center">Hint : Username: jamesd , Password: jamesdpass</p>
 
                     <div class="mb-3 mt-3">
                         <label for="exampleFormControlInput1" class="form-label text-secondary">User Name</label>
@@ -24,6 +24,7 @@
                       </div>
                       <button class="btn btn-warning w-100 mt-2 mb-1 text-white" (click)="getAuth()">SIGN IN</button>
                       <p class="text-danger fw-bold text-center mt-2" *ngIf="access">This Username or Password Not Valid</p>
+
                 </form>
             </div>
         </div>
